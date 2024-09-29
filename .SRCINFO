@@ -1,11 +1,11 @@
 pkgbase = firestorm-beta-bin
 	pkgdesc = [BETA] Firestorm is a feature-packed third-party viewer for Second Life. This is the *beta* release that currently features WebRTC support. **USE AT YOUR OWN RISK**
-	pkgver = 7.1.10.75910
+	pkgver = 7.1.11.76399
 	pkgrel = 1
 	url = https://www.firestormviewer.org/early-access-beta-downloads/
 	install = firestorm-beta.install
 	arch = x86_64
-	license = GPL-2.0-only
+	license = LGPL-2.1-only
 	depends = apr-util
 	depends = dbus-glib
 	depends = glib2>=2.35
@@ -41,9 +41,9 @@ pkgbase = firestorm-beta-bin
 	optdepends = nvidia-utils: for NVIDIA support
 	provides = firestorm-beta
 	conflicts = firestorm-beta
-	source = https://downloads.firestormviewer.org/preview/linux/Phoenix-Firestorm-Betax64-7-1-10-75910.tar.xz
+	source = https://downloads.firestormviewer.org/preview/linux/Phoenix-Firestorm-Betax64-7-1-11-76399.tar.xz
 	source = firestorm-beta.desktop
-	md5sums = e12ac7284e02fec32f6f8330cdec0f06
-	md5sums = c33565b76e008999e79ec49363b3fd4c
+	md5sums = 077b3a4740a99aa89ffc967f909acb17
+	md5sums = 0f187a41bbdc4a731391ff8044e24575
 
 pkgname = firestorm-beta-bin
