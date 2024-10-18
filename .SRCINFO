@@ -1,6 +1,6 @@
 pkgbase = firestorm-beta-bin
 	pkgdesc = Firestorm is a feature-packed third-party viewer for Second Life (beta version)
-	pkgver = 7.1.11.76474
+	pkgver = 7.1.11.76486
 	pkgrel = 1
 	url = https://www.firestormviewer.org/early-access-beta-downloads/
 	install = firestorm-beta.install
@@ -41,9 +41,9 @@ pkgbase = firestorm-beta-bin
 	optdepends = nvidia-utils: for NVIDIA support
 	provides = firestorm-beta
 	conflicts = firestorm-beta
-	source = https://downloads.firestormviewer.org/preview/linux/Phoenix-Firestorm-Betax64_AVX2-7-1-11-76474.tar.xz
+	source = https://downloads.firestormviewer.org/preview/linux/Phoenix-Firestorm-Betax64_AVX2-7-1-11-76486.tar.xz
 	source = firestorm-beta.desktop
-	md5sums = 2cc944f80252f41ff9c932312ff53990
+	md5sums = ab380e3ff2bec6b6192b71dcdcd82cbe
 	md5sums = 93d783636a291d1755004f64adc96dce
 
 pkgname = firestorm-beta-bin
