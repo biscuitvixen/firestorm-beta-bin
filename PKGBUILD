@@ -1,9 +1,9 @@
 # Maintainer: Alex Tharp <alex at toastercup dot io>
-_appname=firestorm-beta
+_appname="firestorm-beta"
 pkgname="${_appname}-bin"
 provides=("${_appname}")
 conflicts=("${_appname}")
-pkgver=7.1.12.77526
+pkgver=7.1.12.77610
 pkgrel=1
 pkgdesc="Firestorm is a feature-packed third-party viewer for Second Life (beta version)"
 url="https://www.firestormviewer.org/early-access-beta-downloads/"
@@ -53,7 +53,7 @@ source=(
   "${_appname}.desktop"
 )
 md5sums=(
-  "e1014f49359b4db90f2669ce0bd6ef9f"
+  "5b52b5429b3f62c12b69c6a32da6f36a"
   "93d783636a291d1755004f64adc96dce"
 )
 
@@ -64,8 +64,8 @@ package() {
   cd "${pkgdir}/opt/${_appname}"
   find "app_settings" "skins" -type f -execdir chmod 644 "{}" +
 
-  install -D -m644 "${srcdir}/${_appname}.desktop" "$pkgdir/usr/share/applications/${_appname}.desktop"
-  install -D -m644 "firestorm_icon.png" "$pkgdir/usr/share/pixmaps/${_appname}.png"
+  install -D -m644 "${srcdir}/${_appname}.desktop" "${pkgdir}/usr/share/applications/${_appname}.desktop"
+  install -D -m644 "firestorm_icon.png" "${pkgdir}/usr/share/pixmaps/${_appname}.png"
 
   install -d "${pkgdir}/usr/share/licenses/${pkgname}"
   install -m644 "LGPL-license.txt" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
