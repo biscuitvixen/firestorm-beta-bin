@@ -47,22 +47,22 @@ def calculate_sha256(filepath: Path) -> str:
 def update_pkgbuild(pkgbuild: Path, dotted_version: str, checksum: str):
     print("📝 Updating PKGBUILD...")
     updated_lines = []
-    in_md5sums = False
+    in_sha256sums = False
     md5_done = False
 
     for line in pkgbuild.read_text().splitlines():
         if line.startswith("pkgver="):
             updated_lines.append(f"pkgver={dotted_version}")
-        elif line.startswith("md5sums=("):
-            in_md5sums = True
+        elif line.startswith("sha256sums=("):
+            in_sha256sums = True
             updated_lines.append(line)
-        elif in_md5sums and not md5_done:
+        elif in_sha256sums and not md5_done:
             # Replace the first md5 line
             updated_lines.append(f'  "{checksum}"')
             md5_done = True
-        elif in_md5sums and md5_done and line.strip().endswith(")"):
+        elif in_sha256sums and md5_done and line.strip().endswith(")"):
             updated_lines.append(line)
-            in_md5sums = False
+            in_sha256sums = False
         else:
             updated_lines.append(line)
 
